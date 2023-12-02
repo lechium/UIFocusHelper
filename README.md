@@ -20,10 +20,6 @@ it, simply add the following line to your Podfile:
 pod 'UIFocusHelper'
 ```
 
-## Author
-
-Kevin Bradley, bradleyk@wondrium.com
-
 ## License
 
 UIFocusHelper is available under the MIT license. See the LICENSE file for more info.
