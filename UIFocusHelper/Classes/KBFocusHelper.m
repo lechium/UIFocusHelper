@@ -20,51 +20,22 @@
     id <UIApplicationDelegate> appDelegate = [[UIApplication sharedApplication] delegate];
     UIWindow *window = [appDelegate window];
     UIFocusSystem *fs = [UIFocusSystem focusSystemForEnvironment:viewController];
+    //_UIFocusMovementRequest need to make one of these to have the focus engine assess the layout to create a 'quick look' representation
     NSArray *uifmr = @[@"_U", @"IFoc", @"usMo", @"veme", @"ntRequest"];
     id focusMovementRequest = [[NSClassFromString([uifmr componentsJoinedByString:@""]) alloc] initWithFocusSystem:fs window:window];
     NSArray *uifmi = @[@"_U",@"IFo", @"cus", @"Mov", @"eme", @"ntInfo"];
-    id movementInfo = [[NSClassFromString([uifmi componentsJoinedByString:@""]) alloc] initWithHeading:focusHeading linearHeading:0 isInitial:true shouldLoadScrollableContainer:true looping:false groupFilter:0];
+    id movementInfo = [[NSClassFromString([uifmi componentsJoinedByString:@""]) alloc] initWithHeading:focusHeading linearHeading:0 isInitial:true shouldLoadScrollableContainer:true looping:false groupFilter:0]; //_UIFocusMovementInfo, need these to tell the focus manager what direction to calculate the focus path for
     //NSLog(@"movementInfo: %@", movementInfo);
     [focusMovementRequest setMovementInfo:movementInfo];
-    id itemInfo = [focusMovementRequest focusedItemInfo];
-    id searchInfo = [focusMovementRequest searchInfo];
-    //UIFocusUpdateContext *context = [[UIFocusUpdateContext alloc] _initWithFocusMovementRequest:focusMovementRequest nextFocusedItem:nil];
-    id region = [itemInfo focusedRegion];
-    
-    NSLog(@"region: %@", region);
-    /*
-     
-     //up
-     {{80, 223}, {335, 40}}
-     {{80, -1}, {335, 224}}
-     
-     {{80, 180}, {298, 40}}
-     {{80, -2}, {298, 182}}
-     
-     //left
-     {{1609, 53.7436}, {235, 73.5128}}
-     {{-2, 53.7436}, {1611, 73.5128}}
-     
-     {{1391, 54.4037}, {258, 72.1927}}
-     {{-2, 54.4037}, {1393, 72.1927}}
-     
-     //right
-     {{404, 53.259668508287291}, {221, 74.480662983425418}}
-     {{625, 53.2597}, {1297, 74.4807}}
-    
-     {{404, 53.259668508287291}, {221, 74.480662983425418}}
-     {{625, 53.2597}, {1297, 74.4807}}
-     
-     we are going down so we take the height and add it to origin.y and add ~880 to the height to set the 'snapshot' frame
-     
-     {{585, 52.988505747126439}, {214, 75.022988505747136}}
-     {{585, 128.011}, {214, 953.989}} //878.96601149425286
-     */
-    NSArray *uifssc = @[@"_U",@"IFo",@"cu",@"sSys",@"temS",@"cen",@"eCom",@"ponent"];
+    id itemInfo = [focusMovementRequest focusedItemInfo]; //_UIFocusItemInfo
+    id searchInfo = [focusMovementRequest searchInfo]; //_UIFocusSearchInfo
+    id region = [itemInfo focusedRegion]; //14-15: _UIFocusRegion 16+: _UIFocusItemRegion
+    //Need coordinate space, can get it from other places too, but this still works so meh
+    NSArray *uifssc = @[@"_U",@"IFo",@"cu",@"sSys",@"temS",@"cen",@"eCom",@"ponent"]; //_UIFocusSystemSceneComponent
     id sceneComp = [NSClassFromString([uifssc componentsJoinedByString:@""]) sceneComponentForFocusSystem: fs];
     id coordSpace = [sceneComp coordinateSpace];
     NSArray *uifmss = @[@"_U",@"IF",@"oc",@"usM",@"apS",@"nap",@"shotter"];
-    Class snapshotterClass = NSClassFromString([uifmss componentsJoinedByString:@""]);
+    Class snapshotterClass = NSClassFromString([uifmss componentsJoinedByString:@""]); //_UIFocusMapSnapshotter
     id snapshotter = nil;
     if ([snapshotterClass instancesRespondToSelector:@selector(initWithFocusSystem:rootContainer:coordinateSpace:searchInfo:)]) {
         snapshotter = [[snapshotterClass alloc] initWithFocusSystem:fs rootContainer:window coordinateSpace:coordSpace searchInfo:searchInfo];
@@ -77,7 +48,7 @@
         CGSize screenSize = [[UIScreen mainScreen] bounds].size;
         if ([region respondsToSelector:@selector(frame)]) { //_UIFocusRegion
             frame = [region frame];
-        } else { // in 16 + its a _UIFocusItemRegion instead of _UIFocusRegion
+        } else { // in 16 + its a _UIFocusItemRegion instead of _UIFocusRegion, need to convert the coordinate space
             frame = [itemInfo focusedRectInCoordinateSpace:[UIScreen mainScreen]];
         }
             switch (focusHeading) {
