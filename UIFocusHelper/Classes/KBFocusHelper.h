@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import "UIFocusPrivate.h"
-#import "NSObject+Additions.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
