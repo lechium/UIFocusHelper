@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Kevin Bradley/UIFocusHelper'
+  s.homepage         = 'https://github.com/lechium/UIFocusHelper'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Kevin Bradley' => 'bradleyk@wondrium.com' }
-  s.source           = { :git => 'https://github.com/Kevin Bradley/UIFocusHelper.git', :tag => s.version.to_s }
+  s.author           = { 'Kevin Bradley' => 'kevin.w.bradley@me.com' }
+  s.source           = { :git => 'https://github.com/lechium/UIFocusHelper.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.tvos.deployment_target = '13.0'
 
   s.source_files = 'UIFocusHelper/Classes/**/*'
   

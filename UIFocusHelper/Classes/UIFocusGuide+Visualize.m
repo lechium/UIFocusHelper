@@ -9,6 +9,14 @@
 
 @implementation UIFocusGuide (Visualize)
 
+- (void)setVisualizedView:(nullable UIView *)view {
+    objc_setAssociatedObject(self, @selector(visualizedView), view, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (nullable UIView *)visualizedView {
+    return objc_getAssociatedObject(self, @selector(visualizedView));
+}
+
 - (UIView *)visualizeWithColor:(UIColor *)color {
     UIView *view = [UIView new];
     view.frame = self.layoutFrame;
@@ -23,6 +31,11 @@
         [label sizeToFit];
         [view addSubview:label];
     }
+    UIView *visualizedTest = [self visualizedView];
+    if (visualizedTest){
+        [visualizedTest removeFromSuperview];
+    }
+    [self setVisualizedView:view];
     return view;
 }
 
