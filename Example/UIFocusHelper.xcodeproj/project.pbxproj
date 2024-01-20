@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CF21AE42B5A265200F75DAD /* YTPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF21AE32B5A265200F75DAD /* YTPlaceholder.png */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -14,14 +15,12 @@
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* KBFOCUSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* KBFOCUSAppDelegate.m */; };
 		6003F5A7195388D20070C39A /* KBFOCUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* KBFOCUSViewController.m */; };
-		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9CB72F949F46A61CA0A19BEF /* Pods_UIFocusHelper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D44AD891D577865FF4A8A7 /* Pods_UIFocusHelper_Example.framework */; };
 		CA36639BB2B0CF10D7AAB127 /* Pods_UIFocusHelper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293490FFFDE30B04EE861322 /* Pods_UIFocusHelper_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -38,8 +37,9 @@
 
 /* Begin PBXFileReference section */
 		16C9126E2303DCB0148681BD /* Pods-UIFocusHelper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIFocusHelper_Example.debug.xcconfig"; path = "Target Support Files/Pods-UIFocusHelper_Example/Pods-UIFocusHelper_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		274BA71EB4632D358D18CF91 /* UIFocusHelper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UIFocusHelper.podspec; path = ../UIFocusHelper.podspec; sourceTree = "<group>"; };
+		274BA71EB4632D358D18CF91 /* UIFocusHelper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UIFocusHelper.podspec; path = ../UIFocusHelper.podspec; sourceTree = "<group>"; };
 		293490FFFDE30B04EE861322 /* Pods_UIFocusHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIFocusHelper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF21AE32B5A265200F75DAD /* YTPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YTPlaceholder.png; sourceTree = SOURCE_ROOT; };
 		6003F58A195388D20070C39A /* UIFocusHelper_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIFocusHelper_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,7 +52,6 @@
 		6003F59D195388D20070C39A /* KBFOCUSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBFOCUSAppDelegate.m; sourceTree = "<group>"; };
 		6003F5A5195388D20070C39A /* KBFOCUSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBFOCUSViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* KBFOCUSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBFOCUSViewController.m; sourceTree = "<group>"; };
-		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* UIFocusHelper_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIFocusHelper_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -62,10 +61,9 @@
 		62D44AD891D577865FF4A8A7 /* Pods_UIFocusHelper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIFocusHelper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		666AD47DA8AF80CED8154E85 /* Pods-UIFocusHelper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIFocusHelper_Tests.debug.xcconfig"; path = "Target Support Files/Pods-UIFocusHelper_Tests/Pods-UIFocusHelper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7C16EC3E086CDFAB63EE65E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C16EC3E086CDFAB63EE65E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8CD19462BE88DDCA1185F306 /* Pods-UIFocusHelper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIFocusHelper_Tests.release.xcconfig"; path = "Target Support Files/Pods-UIFocusHelper_Tests/Pods-UIFocusHelper_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CC1CC37B5E101C352B7E7721 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CC1CC37B5E101C352B7E7721 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FD5E71655E9A40209811DDA8 /* Pods-UIFocusHelper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIFocusHelper_Example.release.xcconfig"; path = "Target Support Files/Pods-UIFocusHelper_Example/Pods-UIFocusHelper_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,11 +132,10 @@
 			children = (
 				6003F59C195388D20070C39A /* KBFOCUSAppDelegate.h */,
 				6003F59D195388D20070C39A /* KBFOCUSAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* KBFOCUSViewController.h */,
 				6003F5A6195388D20070C39A /* KBFOCUSViewController.m */,
+				4CF21AE32B5A265200F75DAD /* YTPlaceholder.png */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for UIFocusHelper";
@@ -193,7 +190,6 @@
 				666AD47DA8AF80CED8154E85 /* Pods-UIFocusHelper_Tests.debug.xcconfig */,
 				8CD19462BE88DDCA1185F306 /* Pods-UIFocusHelper_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +254,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -277,9 +274,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
-				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				4CF21AE42B5A265200F75DAD /* YTPlaceholder.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,11 +342,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UIFocusHelper_Example/Pods-UIFocusHelper_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FPScrollingBanner/FPScrollingBanner.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UIFocusHelper/UIFocusHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/tvOSShelfController/tvOSShelfController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPScrollingBanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIFocusHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/tvOSShelfController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -451,8 +453,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
@@ -483,8 +486,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -500,7 +504,10 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -516,7 +523,10 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

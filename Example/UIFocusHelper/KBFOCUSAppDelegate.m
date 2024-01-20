@@ -7,12 +7,20 @@
 //
 
 #import "KBFOCUSAppDelegate.h"
+#import "KBFOCUSViewController.h"
 
 @implementation KBFOCUSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    KBFOCUSViewController *focusVC = [[KBFOCUSViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[focusVC];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+    self.window.rootViewController = navVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

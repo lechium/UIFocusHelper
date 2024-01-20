@@ -8,6 +8,8 @@
 
 @import UIKit;
 
-@interface KBFOCUSViewController : UIViewController
+@import tvOSShelfController;
+
+@interface KBFOCUSViewController : KBShelfViewController
 
 @end
