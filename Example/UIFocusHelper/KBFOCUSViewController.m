@@ -78,7 +78,7 @@
         __strong typeof(self) strongSelf = weakSelf;
         NSLog(@"selected item: %@ long press: %d", item, longPress);
         if (!longPress) {
-            [strongSelf showLongPressAlertController];
+            [strongSelf showFocusDebugAlertController];
             return;
         }
         UIImage *focusImage = [KBFocusHelper createFocusSnapshotFromViewController:strongSelf clipping:true];
@@ -106,7 +106,7 @@
     });
 }
 
-- (void)showLongPressAlertController {
+- (void)showFocusDebugAlertController {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Create focus snapshot" message:@"Choose the direction you want the focus snapshot to calculate for, none with generate a generic focus image without any cropped focus areas." preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *leftAction = [UIAlertAction actionWithTitle:@"Left" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self performActionWithHeading:UIFocusHeadingLeft];
