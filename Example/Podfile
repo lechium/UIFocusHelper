@@ -4,7 +4,7 @@ platform :tvos, '13.0'
 
 target 'UIFocusHelper_Example' do
   pod 'UIFocusHelper', :path => '../'
-  pod 'tvOSShelfController', '0.2.0'
+  pod 'tvOSShelfController', '0.2.2'
   target 'UIFocusHelper_Tests' do
     inherit! :search_paths
 
