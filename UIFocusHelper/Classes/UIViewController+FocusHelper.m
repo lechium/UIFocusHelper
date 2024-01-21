@@ -39,6 +39,20 @@
     });
 }
 
++ (UIViewController *)imageViewControllerWithImage:(UIImage *)image {
+    UIViewController *vc = [UIViewController new];
+    UIImageView *imageView = [UIImageView new];
+    imageView.translatesAutoresizingMaskIntoConstraints = false;
+    [vc.view addSubview:imageView];
+    imageView.image = image;
+    [imageView.topAnchor constraintEqualToAnchor:vc.view.topAnchor].active = true;
+    [imageView.bottomAnchor constraintEqualToAnchor:vc.view.bottomAnchor].active = true;
+    [imageView.leadingAnchor constraintEqualToAnchor:vc.view.leadingAnchor].active = true;
+    [imageView.trailingAnchor constraintEqualToAnchor:vc.view.trailingAnchor].active = true;
+    
+    return vc;
+}
+
 - (void)performActionWithHeading:(UIFocusHeading)heading {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         BOOL isClipping = true;
@@ -47,7 +61,7 @@
         }
         UIImage *focusImage = [KBFocusHelper createFocusSnapshotFromViewController:self withHeading:heading clipping:isClipping];
         dispatch_async(dispatch_get_main_queue(), ^{
-            UIViewController *imageVC = [self imageViewControllerWithImage:focusImage];
+            UIViewController *imageVC = [UIViewController imageViewControllerWithImage:focusImage];
             [self presentViewController:imageVC animated:true completion:nil];
         });
     });
