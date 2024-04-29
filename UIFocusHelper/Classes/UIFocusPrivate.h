@@ -40,7 +40,10 @@
 @end
 
 @interface _UIFocusMovementInfo: NSObject
+//14.5 +
 -(id)initWithHeading:(unsigned long long)arg1 linearHeading:(unsigned long long)arg2 isInitial:(BOOL)arg3 shouldLoadScrollableContainer:(BOOL)arg4 looping:(BOOL)arg5 groupFilter:(long long)arg6;
+//14.0 - 14.4
++(id)_movementWithHeading:(unsigned long long)arg1 linearHeading:(unsigned long long)arg2 shouldLoadScrollableContainer:(BOOL)arg3 isInitial:(BOOL)arg4 looping:(BOOL)arg5;
 @end
 
 @interface _UIFocusItemInfo: NSObject

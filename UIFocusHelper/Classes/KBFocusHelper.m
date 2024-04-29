@@ -24,7 +24,14 @@
     NSArray *uifmr = @[@"_U", @"IFoc", @"usMo", @"veme", @"ntRequest"];
     id focusMovementRequest = [[NSClassFromString([uifmr componentsJoinedByString:@""]) alloc] initWithFocusSystem:fs window:window];
     NSArray *uifmi = @[@"_U",@"IFo", @"cus", @"Mov", @"eme", @"ntInfo"];
-    id movementInfo = [[NSClassFromString([uifmi componentsJoinedByString:@""]) alloc] initWithHeading:focusHeading linearHeading:0 isInitial:true shouldLoadScrollableContainer:true looping:false groupFilter:0]; //_UIFocusMovementInfo, need these to tell the focus manager what direction to calculate the focus path for
+    SEL movementInfoSelector = @selector(initWithHeading:linearHeading:isInitial:shouldLoadScrollableContainer:looping:groupFilter:);
+    Class uifmiClass = NSClassFromString([uifmi componentsJoinedByString:@""]);
+    id movementInfo = nil; //_UIFocusMovementInfo, need these to tell the focus manager what direction to calculate the focus path for
+    if ([uifmiClass instancesRespondToSelector:movementInfoSelector]) { //14.5+
+        movementInfo = [[uifmiClass alloc] initWithHeading:focusHeading linearHeading:0 isInitial:true shouldLoadScrollableContainer:true looping:false groupFilter:0];
+    } else { //14.0 -> 14.4
+        movementInfo = [uifmiClass _movementWithHeading:focusHeading linearHeading:0 shouldLoadScrollableContainer:true isInitial:true looping:false];
+    }
     //NSLog(@"movementInfo: %@", movementInfo);
     [focusMovementRequest setMovementInfo:movementInfo];
     id itemInfo = [focusMovementRequest focusedItemInfo]; //_UIFocusItemInfo
