@@ -20,7 +20,7 @@
 - (UIView *)visualizeWithColor:(UIColor *)color {
     UIView *view = [UIView new];
     view.frame = self.layoutFrame;
-    view.backgroundColor = [UIColor redColor];
+    view.backgroundColor = color;
     [self.owningView addSubview:view];
     if ([self.identifier length] > 0 ){
         UILabel *label = [UILabel new];
